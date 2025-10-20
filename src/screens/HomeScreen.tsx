@@ -23,8 +23,6 @@ import AnimatedButton from '../components/AnimatedButton';
 
 
 const HomeScreen = () => {
-
-  // const navigation = useNavigation<NativeStackNavigationProp<AppRootStackParamList, 'Tab'>>();
   const navigation = useNavigation<any>();
   const scale = useSharedValue(1);
   const rotate = useSharedValue(0);

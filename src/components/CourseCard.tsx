@@ -38,8 +38,6 @@ const CourseCard: React.FC<CourseCardProps> = ({
     }
   };
 
-  console.log('thumbnail', thumbnail)
-
   return (
     <Animated.View
       entering={FadeInUp.delay(index * 100).duration(500)}

@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
   ActivityIndicator,
   FlatList,
@@ -12,74 +12,70 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Animated, { FadeInDown } from 'react-native-reanimated';
-import CourseCard from '../components/CourseCard';
-import { useAppDispatch, useAppSelector } from '../redux/hooks';
-import { fetchCourses } from '../redux/slices/courseSlice';
-import { Course } from '../types';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import CourseCard from '../components/CourseCard';
+import { useGetCoursesQuery } from '../redux/services/coursesApi';
+import { Course } from '../types';
 
 const CourseListScreen = () => {
-    const navigation = useNavigation<any>();
-  const dispatch = useAppDispatch();
-  const { courses, loading, error, lastFetched } = useAppSelector(
-    (state) => state.courses
-  );
+  const navigation = useNavigation<any>();
+  const { 
+    data, 
+    error, 
+    isLoading, 
+    isFetching, 
+    refetch 
+  } = useGetCoursesQuery({}, {
+    refetchOnMountOrArgChange: true,
+  });
 
-  const [refreshing, setRefreshing] = useState(false);
+  const courses = data || [];
+  const hasError = !!error;
 
-  useEffect(() => {
-    // Fetch courses on mount if not already loaded
-    if (courses.length === 0) {
-      dispatch(fetchCourses());
-    }
-  }, []);
 
   const handleRefresh = async () => {
-    setRefreshing(true);
-    await dispatch(fetchCourses());
-    setRefreshing(false);
+    try {
+      await refetch();
+    } catch (err) {
+      console.error('Refresh failed:', err);
+    }
   };
 
-  const handleCoursePress = (course: Course) => {
-    // You can navigate to course details screen here
-    console.log('Course pressed:', course.title);
-  };
+  const handleCoursePress = (course: Course) => {};
 
   const renderHeader = () => (
     <Animated.View entering={FadeInDown.duration(600)} style={styles.headerCard}>
       <Text style={styles.headerTitle}>Available Courses</Text>
       <Text style={styles.headerSubtitle}>
-        {courses.length} courses available offline
+        {courses.length} courses available
       </Text>
-      {lastFetched && (
-        <Text style={styles.lastUpdated}>
-          Last updated: {new Date(lastFetched).toLocaleDateString()}
-        </Text>
-      )}
-      {error && (
-        <View style={styles.errorContainer}>
-          <Text style={styles.errorText}>⚠️ {error}</Text>
-          <Text style={styles.offlineText}>Showing cached courses</Text>
-        </View>
-      )}
     </Animated.View>
   );
 
   const renderEmpty = () => (
     <View style={styles.emptyContainer}>
       <Text style={styles.emptyEmoji}>📚</Text>
-      <Text style={styles.emptyTitle}>No Courses Available</Text>
+      <Text style={styles.emptyTitle}>
+        {isLoading ? 'Loading...' : 'No Courses Available'}
+      </Text>
       <Text style={styles.emptyText}>
-        Pull down to refresh and load courses
+        {isLoading
+          ? 'Fetching courses from server...'
+          : hasError
+          ? 'Unable to load courses. Please check your connection and try again.'
+          : 'Pull down to refresh and load courses'}
       </Text>
     </View>
   );
 
   const renderFooter = () => {
-    if (!loading) return null;
+    if (!isLoading && !isFetching) return null;
     return (
       <View style={styles.footerLoader}>
         <ActivityIndicator size="large" color="#667eea" />
+        <Text style={styles.loadingText}>
+          {isLoading ? 'Loading courses...' : 'Refreshing...'}
+        </Text>
       </View>
     );
   };
@@ -130,7 +126,7 @@ const CourseListScreen = () => {
         showsVerticalScrollIndicator={false}
         refreshControl={
           <RefreshControl
-            refreshing={refreshing}
+            refreshing={isFetching}
             onRefresh={handleRefresh}
             colors={['#667eea']}
             tintColor="#667eea"
@@ -169,11 +165,11 @@ const styles = StyleSheet.create({
   backButtonText: {
     color: '#FFFFFF',
     fontSize: 16,
-    fontFamily: "PoppinsBold",
+    fontFamily: 'PoppinsBold',
   },
   headerTitleText: {
     fontSize: 20,
-    fontFamily: "PoppinsBold",
+    fontFamily: 'PoppinsBold',
     color: '#FFFFFF',
     letterSpacing: 0.5,
   },
@@ -201,59 +197,69 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 22,
-    fontFamily: "PoppinsBold",
+    fontFamily: 'PoppinsBold',
     color: '#2D3748',
     marginBottom: 8,
   },
   headerSubtitle: {
     fontSize: 15,
     color: '#718096',
-    fontFamily: "PoppinsMedium",
+    fontFamily: 'PoppinsMedium',
   },
   lastUpdated: {
     fontSize: 13,
-    fontFamily: "PoppinsMedium",
+    fontFamily: 'PoppinsMedium',
     color: '#A0AEC0',
     marginTop: 8,
-    fontStyle: 'italic',
   },
-  errorContainer: {
+  offlineContainer: {
     marginTop: 12,
     padding: 12,
-    backgroundColor: '#FED7D7',
+    backgroundColor: '#FEF5E7',
     borderRadius: 8,
+    borderLeftWidth: 4,
+    borderLeftColor: '#F39C12',
   },
-  errorText: {
-    fontSize: 14,
-    color: '#c53030',
-    fontFamily: "PoppinsBold",
-    marginBottom: 4,
-  },
-  offlineText: {
+  offlineBadge: {
     fontSize: 13,
-    fontFamily: "PoppinsMedium",
-    color: '#742a2a',
+    color: '#D68910',
+    fontFamily: 'PoppinsBold',
+    textAlign: 'center',
+  },
+  onlineContainer: {
+    marginTop: 12,
+    padding: 12,
+    backgroundColor: '#E6FFFA',
+    borderRadius: 8,
+    borderLeftWidth: 4,
+    borderLeftColor: '#38B2AC',
+  },
+  onlineBadge: {
+    fontSize: 13,
+    color: '#2C7A7B',
+    fontFamily: 'PoppinsBold',
+    textAlign: 'center',
   },
   emptyContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 40,
+    paddingVertical: 60,
   },
   emptyEmoji: {
     fontSize: 80,
-    fontFamily: "PoppinsMedium",
     marginBottom: 20,
   },
   emptyTitle: {
     fontSize: 24,
-    fontFamily: "PoppinsBold",
+    fontFamily: 'PoppinsBold',
     color: '#2D3748',
     marginBottom: 12,
   },
   emptyText: {
     fontSize: 16,
-    fontFamily: "PoppinsMedium",
+    fontFamily: 'PoppinsMedium',
     color: '#718096',
     textAlign: 'center',
     lineHeight: 24,
@@ -261,6 +267,12 @@ const styles = StyleSheet.create({
   footerLoader: {
     paddingVertical: 20,
     alignItems: 'center',
+  },
+  loadingText: {
+    marginTop: 8,
+    fontSize: 14,
+    fontFamily: 'PoppinsMedium',
+    color: '#667eea',
   },
 });
 

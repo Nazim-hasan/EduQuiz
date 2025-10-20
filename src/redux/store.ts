@@ -11,17 +11,18 @@ import {
 } from 'redux-persist';
 import { mmkvStorage } from '../utils/storage';
 import quizReducer from './slices/quizSlice';
-import courseReducer from './slices/courseSlice';
+import { coursesApi } from './services/coursesApi';
 
 const persistConfig = {
   key: 'root',
   storage: mmkvStorage,
-  whitelist: ['quiz', 'courses'], // Only persist these reducers
+  whitelist: ['quiz'],
+  blacklist: ['coursesApi'],
 };
 
 const rootReducer = combineReducers({
   quiz: quizReducer,
-  courses: courseReducer,
+  [coursesApi.reducerPath]: coursesApi.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -33,7 +34,7 @@ export const store = configureStore({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }),
+    }).concat(coursesApi.middleware),
 });
 
 export const persistor = persistStore(store);

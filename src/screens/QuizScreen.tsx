@@ -49,7 +49,6 @@ const QuizScreen = () => {
   }, [currentQuestionIndex, questions.length]);
 
   useEffect(() => {
-    // Reset quiz when component mounts
     dispatch(resetQuiz());
   }, []);
 
