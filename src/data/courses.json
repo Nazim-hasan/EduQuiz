@@ -6,7 +6,7 @@
     "duration": "4 weeks",
     "level": "Beginner",
     "instructor": "John Doe",
-    "thumbnail": "https://via.placeholder.com/300x200/4A90E2/ffffff?text=React+Native"
+    "thumbnail": "https://picsum.photos/id/9/500/300"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "duration": "6 weeks",
     "level": "Advanced",
     "instructor": "Jane Smith",
-    "thumbnail": "https://via.placeholder.com/300x200/7B68EE/ffffff?text=Redux"
+    "thumbnail": "https://picsum.photos/id/13/500/300"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "duration": "5 weeks",
     "level": "Intermediate",
     "instructor": "Mike Johnson",
-    "thumbnail": "https://via.placeholder.com/300x200/FF6B6B/ffffff?text=UI+Design"
+    "thumbnail": "https://picsum.photos/id/22/500/300"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "duration": "3 weeks",
     "level": "Beginner",
     "instructor": "Sarah Williams",
-    "thumbnail": "https://via.placeholder.com/300x200/FFA500/ffffff?text=JavaScript"
+    "thumbnail": "https://picsum.photos/id/26/500/300"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "duration": "4 weeks",
     "level": "Intermediate",
     "instructor": "David Brown",
-    "thumbnail": "https://via.placeholder.com/300x200/20B2AA/ffffff?text=API"
+    "thumbnail": "https://picsum.photos/id/27/500/300"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "duration": "5 weeks",
     "level": "Advanced",
     "instructor": "Emily Davis",
-    "thumbnail": "https://via.placeholder.com/300x200/32CD32/ffffff?text=Performance"
+    "thumbnail": "https://picsum.photos/id/36/500/300"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "duration": "4 weeks",
     "level": "Intermediate",
     "instructor": "Chris Wilson",
-    "thumbnail": "https://via.placeholder.com/300x200/FF1493/ffffff?text=Testing"
+    "thumbnail": "https://picsum.photos/id/54/500/300"
   },
   {
     "id": 8,
@@ -69,6 +69,6 @@
     "duration": "6 weeks",
     "level": "Intermediate",
     "instructor": "Anna Martinez",
-    "thumbnail": "https://via.placeholder.com/300x200/FFD700/ffffff?text=Firebase"
+    "thumbnail": "https://picsum.photos/id/59/500/300"
   }
 ]
