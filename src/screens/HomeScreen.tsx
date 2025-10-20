@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   title: {
-    fontSize: 42,
+    fontSize: 32,
     fontFamily: "PoppinsBold",
     color: '#FFFFFF',
     letterSpacing: 1,
@@ -230,16 +230,16 @@ const styles = StyleSheet.create({
     shadowRadius: 12,
   },
   welcomeTitle: {
-    fontSize: 24,
+    fontSize: 20,
     color: '#2D3748',
     marginBottom: 5,
     fontFamily: "PoppinsBold",
   },
   welcomeText: {
-    fontSize: 15,
+    fontSize: 13,
     fontFamily: "PoppinsMedium",
     color: '#4A5568',
-    lineHeight: 22,
+    lineHeight: 20,
   },
   buttonsContainer: {
     paddingHorizontal: 20,
@@ -278,7 +278,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: "PoppinsBold",
     color: '#2D3748',
-    // marginBottom: 20,
     textAlign: 'center',
   },
   statsRow: {
