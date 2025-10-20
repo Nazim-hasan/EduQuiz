@@ -2,7 +2,9 @@
 
 A beautiful, feature-rich React Native LMS application with quiz functionality and offline course support.
 
-![React Native](https://img.shields.io/badge/React%20Native-0.72+-blue.svg)
+![React Native](https://img.shields.io/badge/React%20Native-0.82+-blue.svg)
+![New Architecture](https://img.shields.io/badge/New%20Architecture-green.svg)
+![React](https://img.shields.io/badge/React-19.0+-green.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)
 ![Redux](https://img.shields.io/badge/Redux%20Toolkit-2.0+-purple.svg)
 
@@ -55,13 +57,13 @@ Before you begin, ensure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/learnhub-lms.git
+git clone https://github.com/Nazim-hasan/EduQuiz
 cd learnhub-lms
 ```
 
 ### 2. Install Dependencies
 ```bash
-npm install
+yarn
 ```
 
 ### 3. Install iOS Pods (iOS only)
@@ -110,17 +112,17 @@ LearnHub/
 
 ### Start Metro Bundler
 ```bash
-npm start
+yarn start --reset-cache
 ```
 
 ### Run on Android
 ```bash
-npm run android
+yarn android
 ```
 
 ### Run on iOS
 ```bash
-npm run ios
+yarn ios
 ```
 
 ## 📱 App Screens
@@ -239,18 +241,6 @@ Edit `src/data/courses.json`:
 }
 ```
 
-## 🧪 Testing
-
-### Run Tests
-```bash
-npm test
-```
-
-### Run Linter
-```bash
-npm run lint
-```
-
 ## 📦 Dependencies
 
 ### Core Dependencies
@@ -285,19 +275,19 @@ npm run lint
 ### Metro Bundler Issues
 ```bash
 # Clear cache and restart
-npm start -- --reset-cache
+yarn start -- --reset-cache
 ```
 
 ### Android Build Issues
 ```bash
 cd android && ./gradlew clean && cd ..
-npm run android
+yarn android
 ```
 
 ### iOS Build Issues
 ```bash
 cd ios && pod deintegrate && pod install && cd ..
-npm run ios
+yarn ios
 ```
 
 ### TypeScript Errors

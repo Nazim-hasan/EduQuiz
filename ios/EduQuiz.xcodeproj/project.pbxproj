@@ -14,6 +14,8 @@
 		8AEC24B535054D299B40F65E /* PoppinsMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D0F01A372514215BEF6E2E1 /* PoppinsMedium.ttf */; };
 		EE49D8FC7E5D43F3BDDD90A7 /* PoppinsBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BA417846F6947ED9063FA89 /* PoppinsBold.ttf */; };
 		F9AF8A61EE4A2500A346467A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		55B9B67633B744EA93368C95 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A307C3AF094EB893B51B67 /* BootSplash.storyboard */; };
+		6A153D3060E946578CC0D516 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B3273CA1BD473D901108B2 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = EduQuiz/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = EduQuiz/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		38A307C3AF094EB893B51B67 /* BootSplash.storyboard */ = {isa = PBXFileReference; name = "BootSplash.storyboard"; path = "EduQuiz/BootSplash.storyboard"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D8B3273CA1BD473D901108B2 /* Colors.xcassets */ = {isa = PBXFileReference; name = "Colors.xcassets"; path = "EduQuiz/Colors.xcassets"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = folder.assetcatalog; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				38A307C3AF094EB893B51B67 /* BootSplash.storyboard */,
+				D8B3273CA1BD473D901108B2 /* Colors.xcassets */,
 			);
 			name = EduQuiz;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 				F9AF8A61EE4A2500A346467A /* PrivacyInfo.xcprivacy in Resources */,
 				EE49D8FC7E5D43F3BDDD90A7 /* PoppinsBold.ttf in Resources */,
 				8AEC24B535054D299B40F65E /* PoppinsMedium.ttf in Resources */,
+				55B9B67633B744EA93368C95 /* BootSplash.storyboard in Resources */,
+				6A153D3060E946578CC0D516 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

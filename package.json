@@ -18,6 +18,7 @@
     "lottie-react-native": "^7.3.4",
     "react": "19.1.1",
     "react-native": "0.82.0",
+    "react-native-bootsplash": "^6.3.11",
     "react-native-linear-gradient": "^2.8.3",
     "react-native-mmkv": "^3.3.3",
     "react-native-progress": "^5.0.1",

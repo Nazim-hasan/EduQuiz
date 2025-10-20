@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistor, store } from './src/redux/store';
 import { RootStackParamList } from './src/navigation/types';
+import BootSplash from "react-native-bootsplash";
 
 // Screens
 import HomeScreen from './src/screens/HomeScreen';
@@ -21,17 +22,23 @@ const LoadingScreen = () => (
   </View>
 );
 
+const handleReady = async () => {
+  await BootSplash.hide({ fade: true });
+}
+
 const App = () => {
   return (
     <Provider store={store}>
       <PersistGate loading={<LoadingScreen />} persistor={persistor}>
-        <NavigationContainer>
+        <NavigationContainer onReady={handleReady}>
           <Stack.Navigator
             initialRouteName="Home"
             screenOptions={{
               headerShown: false,
               animation: 'slide_from_right',
-            }}>
+            }}
+            
+            >
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Quiz" component={QuizScreen} />
             <Stack.Screen name="QuizResult" component={QuizResultScreen} />
