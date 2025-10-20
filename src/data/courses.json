@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "React Native Fundamentals",
+    "description": "Learn the basics of React Native development, including components, props, and state management.",
+    "duration": "4 weeks",
+    "level": "Beginner",
+    "instructor": "John Doe",
+    "thumbnail": "https://via.placeholder.com/300x200/4A90E2/ffffff?text=React+Native"
+  },
+  {
+    "id": 2,
+    "title": "Advanced Redux Patterns",
+    "description": "Master Redux Toolkit, middleware, and advanced state management patterns for complex applications.",
+    "duration": "6 weeks",
+    "level": "Advanced",
+    "instructor": "Jane Smith",
+    "thumbnail": "https://via.placeholder.com/300x200/7B68EE/ffffff?text=Redux"
+  },
+  {
+    "id": 3,
+    "title": "Mobile UI/UX Design",
+    "description": "Create beautiful and intuitive mobile interfaces with modern design principles and animations.",
+    "duration": "5 weeks",
+    "level": "Intermediate",
+    "instructor": "Mike Johnson",
+    "thumbnail": "https://via.placeholder.com/300x200/FF6B6B/ffffff?text=UI+Design"
+  },
+  {
+    "id": 4,
+    "title": "JavaScript ES6+",
+    "description": "Deep dive into modern JavaScript features including async/await, destructuring, and arrow functions.",
+    "duration": "3 weeks",
+    "level": "Beginner",
+    "instructor": "Sarah Williams",
+    "thumbnail": "https://via.placeholder.com/300x200/FFA500/ffffff?text=JavaScript"
+  },
+  {
+    "id": 5,
+    "title": "API Integration & REST",
+    "description": "Learn how to integrate RESTful APIs, handle authentication, and manage data fetching in mobile apps.",
+    "duration": "4 weeks",
+    "level": "Intermediate",
+    "instructor": "David Brown",
+    "thumbnail": "https://via.placeholder.com/300x200/20B2AA/ffffff?text=API"
+  },
+  {
+    "id": 6,
+    "title": "Performance Optimization",
+    "description": "Optimize your React Native apps for better performance, faster load times, and smooth animations.",
+    "duration": "5 weeks",
+    "level": "Advanced",
+    "instructor": "Emily Davis",
+    "thumbnail": "https://via.placeholder.com/300x200/32CD32/ffffff?text=Performance"
+  },
+  {
+    "id": 7,
+    "title": "Testing in React Native",
+    "description": "Learn unit testing, integration testing, and E2E testing with Jest and React Native Testing Library.",
+    "duration": "4 weeks",
+    "level": "Intermediate",
+    "instructor": "Chris Wilson",
+    "thumbnail": "https://via.placeholder.com/300x200/FF1493/ffffff?text=Testing"
+  },
+  {
+    "id": 8,
+    "title": "Firebase & React Native",
+    "description": "Integrate Firebase services including authentication, Firestore database, and cloud functions.",
+    "duration": "6 weeks",
+    "level": "Intermediate",
+    "instructor": "Anna Martinez",
+    "thumbnail": "https://via.placeholder.com/300x200/FFD700/ffffff?text=Firebase"
+  }
+]

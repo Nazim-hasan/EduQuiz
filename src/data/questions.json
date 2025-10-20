@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "question": "What does LMS stand for?",
+    "options": [
+      "Learning Management System",
+      "Library Management System",
+      "Language Model Software",
+      "Logistic Management Solution"
+    ],
+    "answer": "Learning Management System"
+  },
+  {
+    "id": 2,
+    "question": "Which hook is used to manage state in React?",
+    "options": ["useState", "useEffect", "useRef", "useContext"],
+    "answer": "useState"
+  },
+  {
+    "id": 3,
+    "question": "What is React Native built on?",
+    "options": ["React", "Angular", "Vue", "Svelte"],
+    "answer": "React"
+  },
+  {
+    "id": 4,
+    "question": "Which company developed React Native?",
+    "options": ["Facebook", "Google", "Microsoft", "Apple"],
+    "answer": "Facebook"
+  },
+  {
+    "id": 5,
+    "question": "What is JSX?",
+    "options": [
+      "JavaScript XML",
+      "Java Syntax Extension",
+      "JSON Extension",
+      "JavaScript Extra"
+    ],
+    "answer": "JavaScript XML"
+  },
+  {
+    "id": 6,
+    "question": "Which method is used to update state in Redux?",
+    "options": ["dispatch", "setState", "update", "modify"],
+    "answer": "dispatch"
+  },
+  {
+    "id": 7,
+    "question": "What does API stand for?",
+    "options": [
+      "Application Programming Interface",
+      "Advanced Programming Integration",
+      "Automated Process Integration",
+      "Application Process Interface"
+    ],
+    "answer": "Application Programming Interface"
+  },
+  {
+    "id": 8,
+    "question": "Which hook is used for side effects in React?",
+    "options": ["useEffect", "useState", "useReducer", "useMemo"],
+    "answer": "useEffect"
+  },
+  {
+    "id": 9,
+    "question": "What is the virtual DOM?",
+    "options": [
+      "A lightweight copy of the actual DOM",
+      "A database management system",
+      "A type of web server",
+      "A programming language"
+    ],
+    "answer": "A lightweight copy of the actual DOM"
+  },
+  {
+    "id": 10,
+    "question": "Which storage is faster in React Native?",
+    "options": ["MMKV", "AsyncStorage", "SQLite", "Realm"],
+    "answer": "MMKV"
+  }
+]
