@@ -1,4 +1,4 @@
-# 📚 LearnHub - Learning Management System
+# 📚 EduQuiz - Your Gateway to Knowledge & Growth
 
 A beautiful, feature-rich React Native LMS application with quiz functionality and offline course support.
 
@@ -206,16 +206,6 @@ The app implements offline functionality through:
 
 ## 🎨 Customization
 
-### Changing Colors
-Edit gradient colors in screen components:
-```typescript
-<LinearGradient
-  colors={['#667eea', '#764ba2', '#f093fb']} // Modify these
-  start={{ x: 0, y: 0 }}
-  end={{ x: 1, y: 1 }}
->
-```
-
 ### Adding More Questions
 Edit `src/data/questions.json`:
 ```json
@@ -297,19 +287,6 @@ yarn ios
 npx tsc --noEmit
 ```
 
-## 🔮 Future Enhancements
-
-- [ ] User authentication and profiles
-- [ ] Real API integration
-- [ ] Course video playback
-- [ ] Bookmarking favorite courses
-- [ ] Quiz timer functionality
-- [ ] Leaderboard and achievements
-- [ ] Push notifications
-- [ ] Dark mode support
-- [ ] Multi-language support
-- [ ] Course progress tracking
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -318,7 +295,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Nazim Hasan**
 - GitHub: [@nazim-hasan](https://github.com/Nazim-hasan)
-- Email: your.email@example.com
+- Email: connect.nazimhasan@gmail.com
 - LinkedIn: [Nazim Hasan](https://www.linkedin.com/in/dev-nazim-hasan/)
 
 ## 🙏 Acknowledgments
@@ -341,33 +318,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Course List
 ![Course List](screenshots/courses.png)
 
----
-
-## 🎯 Assessment Requirements Checklist
-
-### Section 1: Quiz Module ✅
-- [x] Multiple-choice questions from JSON file
-- [x] Single correct answer per question
-- [x] Progress indicator (Question X of Y)
-- [x] Final score display
-- [x] Beautiful UI with animations
-
-### Section 2: Offline Course List ✅
-- [x] Course list from mock API/JSON
-- [x] Display title + description
-- [x] Cache using MMKV storage
-- [x] Offline access to cached courses
-- [x] Pull-to-refresh functionality
-
-### Technical Requirements ✅
-- [x] React Native CLI
-- [x] TypeScript
-- [x] React Navigation
-- [x] Redux state management
-- [x] MMKV for storage
-- [x] Beautiful animations
-- [x] Professional UI/UX
-
----
 
 **Made with ❤️ and React Native**
