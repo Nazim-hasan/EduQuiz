@@ -84,15 +84,15 @@ LearnHub/
 │   │   └── QuizCard.tsx
 │   ├── data/               # Mock data (JSON files)
 │   │   ├── questions.json
-│   │   └── courses.json
 │   ├── navigation/         # Navigation types
 │   │   └── types.ts
 │   ├── redux/              # Redux store and slices
+│   │   └── services/
+│   │       ├── coursesApi.ts
 │   │   ├── store.ts
 │   │   ├── hooks.ts
 │   │   └── slices/
 │   │       ├── quizSlice.ts
-│   │       └── courseSlice.ts
 │   ├── screens/            # App screens
 │   │   ├── HomeScreen.tsx
 │   │   ├── QuizScreen.tsx
@@ -172,14 +172,6 @@ yarn ios
 - isQuizCompleted: Quiz completion status
 ```
 
-#### Course Slice
-```typescript
-- courses: Array of course objects
-- loading: Loading state for API calls
-- error: Error messages
-- lastFetched: Timestamp of last successful fetch
-```
-
 ### MMKV Storage
 
 Used for:
@@ -214,20 +206,6 @@ Edit `src/data/questions.json`:
   "question": "Your question here?",
   "options": ["Option 1", "Option 2", "Option 3", "Option 4"],
   "answer": "Option 1"
-}
-```
-
-### Adding More Courses
-Edit `src/data/courses.json`:
-```json
-{
-  "id": 9,
-  "title": "Your Course Title",
-  "description": "Course description here",
-  "duration": "6 weeks",
-  "level": "Intermediate",
-  "instructor": "Instructor Name",
-  "thumbnail": "https://placeholder-url.com"
 }
 ```
 
