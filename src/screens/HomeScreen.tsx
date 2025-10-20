@@ -1,31 +1,26 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useEffect } from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
+  Platform,
   ScrollView,
   StatusBar,
-  Dimensions,
-  Platform,
+  StyleSheet,
+  Text,
+  View
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Animated, {
+  Easing,
   FadeInDown,
   FadeInUp,
   useAnimatedStyle,
   useSharedValue,
   withRepeat,
   withTiming,
-  Easing,
 } from 'react-native-reanimated';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../navigation/types';
 import AnimatedButton from '../components/AnimatedButton';
-import { useNavigation } from '@react-navigation/native';
 
 
-
-const { width } = Dimensions.get('window');
 
 const HomeScreen = () => {
 
@@ -225,7 +220,7 @@ const styles = StyleSheet.create({
   welcomeCard: {
     backgroundColor: 'rgba(255, 255, 255, 0.95)',
     marginHorizontal: 20,
-    padding: 24,
+    padding: 18,
     borderRadius: 20,
     marginBottom: 30,
     elevation: 8,
@@ -237,7 +232,7 @@ const styles = StyleSheet.create({
   welcomeTitle: {
     fontSize: 24,
     color: '#2D3748',
-    marginBottom: 12,
+    marginBottom: 5,
     fontFamily: "PoppinsBold",
   },
   welcomeText: {
@@ -283,7 +278,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: "PoppinsBold",
     color: '#2D3748',
-    marginBottom: 20,
+    // marginBottom: 20,
     textAlign: 'center',
   },
   statsRow: {
